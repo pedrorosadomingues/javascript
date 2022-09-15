@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Imigração</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Eu nasci no(a): <input type="text" name="pais" id="pais">!
+    <input type="button" value="Verificar" onclick = "calcular()">
+    <div id="res">
+
+         </div>
+         <script>
+            function calcular() { 
+                var pais = window.document.querySelector('#pais')
+                var res = window.document.querySelector('#res')
+                var p = pais.value
+                    res.innerHTML = `<p>Você nasceu no(a) <strong>${p}</strong>!</p>`
+                        if (p === 'Brasil') {
+                            res.innerHTML = `<p>Você é Brasileiro!</p>`
+                        }
+                    res.innerHTML += `<p>Seja bem-vindo ao Brasil!</p>`
+
+                
+
+            }
+         </script>
+
+</body>
+</html>
